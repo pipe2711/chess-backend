@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const filePath = path.join(__dirname, "./data/users.json");
+const filePath = path.join(__dirname, "./users.json");
 
 const readUsers = () => {
     if (!fs.existsSync(filePath)) {

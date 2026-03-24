@@ -1,25 +1,36 @@
 [
-    {
-        "userId": "1773710427867",
-        "email": "juan@hotmail.com",
-        "username": "juan",
-        "password": "juan"
-    },
-    {
-        "userId": "1773710476828",
-        "email": "aleja@hotmail.com",
-        "username": "aleja",
-        "password": "aleja"
-    },
-    {
-        "userId": "1773784002713",
-        "email": "juliana@gmail.com",
-        "username": "juliana",
-        "password": "juliana",
-        "elo": 0,
-        "wins": 0,
-        "losses": 0,
-        "draws": 0,
-        "matches": []
-    }
+  {
+    "userId": "1773710427867",
+    "email": "juan@hotmail.com",
+    "username": "juan",
+    "password": "juan"
+  },
+  {
+    "userId": "1773710476828",
+    "email": "aleja@hotmail.com",
+    "username": "aleja",
+    "password": "aleja"
+  },
+  {
+    "userId": "1773784002713",
+    "email": "juliana@gmail.com",
+    "username": "juliana",
+    "password": "juliana",
+    "elo": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "matches": []
+  },
+  {
+    "userId": "1774337385803",
+    "email": "pipe@hotmail.com",
+    "username": "pipe",
+    "password": "pipe",
+    "elo": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "matches": []
+  }
 ]
