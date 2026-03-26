@@ -1,22 +1,35 @@
 const express = require("express");
 const cors = require("cors");
 
-const authRoutes = require("./CONTROLADORES/authRoutes");
+const { loginRouter, registerRouter } = require("./CONTROLADORES/authRoutes");
 
-const app = express();
-const PORT = 3001; // 🔥 IMPORTANTE: cambiar puerto
+const loginApp = express();
+const registerApp = express();
 
-app.use(cors());
-app.use(express.json());
+const LOGIN_PORT = 3001;
+const REGISTER_PORT = 3002;
 
-// Rutas
-app.use("/api/auth", authRoutes);
+loginApp.use(cors());
+loginApp.use(express.json());
 
-// Ruta de prueba
-app.get("/", (req, res) => {
-    res.json({ mensaje: "Backend funcionando" });
+registerApp.use(cors());
+registerApp.use(express.json());
+
+loginApp.use("/api/login", loginRouter);
+registerApp.use("/api/register", registerRouter);
+
+loginApp.get("/", (req, res) => {
+    res.json({ mensaje: "Servidor de login funcionando" });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+registerApp.get("/", (req, res) => {
+    res.json({ mensaje: "Servidor de registro funcionando" });
+});
+
+loginApp.listen(LOGIN_PORT, () => {
+    console.log(`Login corriendo en http://localhost:${LOGIN_PORT}`);
+});
+
+registerApp.listen(REGISTER_PORT, () => {
+    console.log(`Register corriendo en http://localhost:${REGISTER_PORT}`);
 });

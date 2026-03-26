@@ -1,14 +1,24 @@
 const authService = require("./authService");
 
-const handleAuth = (req, res) => {
+const login = (req, res) => {
     try {
-        const result = authService.handleAuth(req.body);
+        const result = authService.loginUser(req.body);
         res.status(200).json(result);
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
 };
 
+const register = (req, res) => {
+    try {
+        const result = authService.registerUser(req.body);
+        res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
 module.exports = {
-    handleAuth
+    login,
+    register
 };
