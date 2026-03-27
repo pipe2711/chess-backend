@@ -26,13 +26,9 @@ const findUserByUsername = (username) => {
     return users.find(user => user.username === username);
 };
 
-const findUserByEmailOrUsernameAndPassword = (user, password) => {
+const findUserByEmailOrUsername = (user) => {
     const users = readUsers();
-    return users.find(
-        item =>
-            (item.email === user || item.username === user) &&
-            item.password === password
-    );
+    return users.find(item => item.email === user || item.username === user);
 };
 
 const createUser = ({ email, username, password }) => {
@@ -59,6 +55,6 @@ const createUser = ({ email, username, password }) => {
 module.exports = {
     findUserByEmail,
     findUserByUsername,
-    findUserByEmailOrUsernameAndPassword,
+    findUserByEmailOrUsername,
     createUser
 };

@@ -1,6 +1,7 @@
+const bcrypt = require("bcrypt");
 const authModel = require("../MODELO/authModel");
 
-const registerUser = (data) => {
+const registerUser = async (data) => {
     const { email, username, password } = data;
 
     if (!email || !username || !password) {
@@ -17,7 +18,9 @@ const registerUser = (data) => {
         throw new Error("El nombre de usuario ya está registrado");
     }
 
-    const newUser = authModel.createUser({ email, username, password });
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = authModel.createUser({ email, username, password: hashedPassword });
 
     return {
         user: {
@@ -33,16 +36,21 @@ const registerUser = (data) => {
     };
 };
 
-const loginUser = (data) => {
+const loginUser = async (data) => {
     const { user, password } = data;
 
     if (!user || !password) {
         throw new Error("user y password son obligatorios");
     }
 
-    const userFound = authModel.findUserByEmailOrUsernameAndPassword(user, password);
+    const userFound = authModel.findUserByEmailOrUsername(user);
 
     if (!userFound) {
+        throw new Error("Credenciales inválidas");
+    }
+
+    const match = await bcrypt.compare(password, userFound.password);
+    if (!match) {
         throw new Error("Credenciales inválidas");
     }
 

@@ -1,21 +1,9 @@
 [
   {
-    "userId": "1773710427867",
-    "email": "juan@hotmail.com",
-    "username": "juan",
-    "password": "juan"
-  },
-  {
-    "userId": "1773710476828",
-    "email": "aleja@hotmail.com",
-    "username": "aleja",
-    "password": "aleja"
-  },
-  {
-    "userId": "1773784002713",
-    "email": "juliana@gmail.com",
-    "username": "juliana",
-    "password": "juliana",
+    "userId": "1774569737632",
+    "email": "andres@gmail.com",
+    "username": "andres",
+    "password": "$2b$10$p6wJzgJVHYsfrypKjcnxsOnIAaRJYMMO4nIgkNxeWH.XlWW5cfJ0i",
     "elo": 0,
     "wins": 0,
     "losses": 0,
@@ -23,10 +11,43 @@
     "matches": []
   },
   {
-    "userId": "1774337385803",
+    "userId": "1774569760069",
+    "email": "aleja@gmail.com",
+    "username": "aleja",
+    "password": "$2b$10$d/.mJTcH61iAo9e1XQeQmeoeOoXJmLzWfKuyXqG5ndAl5gLNjMuuK",
+    "elo": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "matches": []
+  },
+  {
+    "userId": "1774569780016",
+    "email": "sofia@gmail.com",
+    "username": "sofia",
+    "password": "$2b$10$D6lcr0H16szfyajYxpkT3eAm9PoYz3WSaLn/dggY3rK2v7XppJP5O",
+    "elo": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "matches": []
+  },
+  {
+    "userId": "1774569867967",
+    "email": "miguel@gmail.com",
+    "username": "miguel",
+    "password": "$2b$10$aIhWQ9HBhHOTuuHFGwVfCuomf0MK9v9xKv8G5KBdEabNjTbppJSpa",
+    "elo": 0,
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "matches": []
+  },
+  {
+    "userId": "1774570083449",
     "email": "pipe@hotmail.com",
     "username": "pipe",
-    "password": "pipe",
+    "password": "$2b$10$qn2m0oMJpRbGdZiMBb22J.h35j5k/OR91xPAw3eXBNWn/TOnH33oC",
     "elo": 0,
     "wins": 0,
     "losses": 0,
